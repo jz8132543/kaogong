@@ -20,7 +20,7 @@ export class QuestionsController {
   async findAll(@Query('tags') tags?: string) {
     if (tags) {
       const tagArray = tags.split(',');
-      return this.questionsService.findByTags(tagArray);
+      return this.questionsService.findAll(tagArray);
     }
     return this.questionsService.findAll();
   }
