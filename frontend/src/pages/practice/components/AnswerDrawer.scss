@@ -1,0 +1,111 @@
+.drawer-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.5);
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  .drawer-content {
+    background: #fff;
+    border-radius: 20px 20px 0 0;
+    padding: 20px;
+    max-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    animation: slideUp 0.3s ease-out forwards;
+  }
+
+  .drawer-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+    
+    .title {
+      font-size: 18px;
+      font-weight: bold;
+      color: #333;
+    }
+    
+    .close-btn {
+      font-size: 20px;
+      color: #999;
+      padding: 4px;
+    }
+  }
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 16px;
+    overflow-y: auto;
+    padding-bottom: 24px;
+    
+    .grid-item {
+      aspect-ratio: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      font-size: 16px;
+      border: 1px solid #ddd;
+      color: #666;
+      transition: all 0.2s;
+
+      &.current {
+        border-color: #1890ff;
+        font-weight: bold;
+      }
+
+      &.answered {
+        background: #e6f7ff;
+        border-color: #1890ff;
+        color: #1890ff;
+      }
+
+      // 交卷后状态
+      &.correct {
+        background: #f6ffed;
+        border-color: #52c41a;
+        color: #52c41a;
+      }
+      &.wrong {
+        background: #fff1f0;
+        border-color: #f5222d;
+        color: #f5222d;
+      }
+      &.missed {
+        background: #f5f5f5;
+        color: #999;
+      }
+    }
+  }
+
+  .drawer-footer {
+    padding-top: 16px;
+    border-top: 1px solid #f0f0f0;
+    
+    .submit-btn {
+      background: #1890ff;
+      color: #fff;
+      border-radius: 24px;
+      height: 48px;
+      line-height: 48px;
+      font-size: 16px;
+      
+      &::after {
+        border: none;
+      }
+    }
+  }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(100%); }
+  to { transform: translateY(0); }
+}

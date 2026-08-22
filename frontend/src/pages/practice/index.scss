@@ -1,0 +1,103 @@
+page {
+  background: #f5f6f8;
+}
+
+.practice-page {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  box-sizing: border-box;
+  
+  .loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #999;
+  }
+
+  .header-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 16px;
+    background: #fff;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+    z-index: 10;
+    
+    .right-controls {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      
+      .progress-text {
+        font-size: 14px;
+        color: #666;
+        font-weight: bold;
+      }
+      
+      .answer-card-btn {
+        display: flex;
+        align-items: center;
+        background: #e6f7ff;
+        color: #1890ff;
+        padding: 4px 12px;
+        border-radius: 16px;
+        font-size: 13px;
+        
+        .icon {
+          margin-right: 4px;
+        }
+      }
+    }
+  }
+
+  .main-scroll {
+    flex: 1;
+    padding: 16px;
+    box-sizing: border-box;
+    // Hide scrollbar but keep functionality
+    ::-webkit-scrollbar {
+      display: none;
+    }
+    
+    .question-swiper {
+      height: auto;
+      min-height: 400px; 
+      // This allows the swiper to grow based on content
+    }
+  }
+
+  .bottom-bar {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 16px 24px;
+    background: #fff;
+    box-shadow: 0 -1px 8px rgba(0,0,0,0.05);
+    
+    .nav-btn {
+      flex: 1;
+      margin: 0 8px;
+      height: 44px;
+      line-height: 44px;
+      font-size: 15px;
+      border-radius: 22px;
+      background: #f5f5f5;
+      color: #333;
+      
+      &::after { border: none; }
+      
+      &[disabled] {
+        opacity: 0.5;
+        background: #eee;
+      }
+      
+      &.primary {
+        background: #1890ff;
+        color: #fff;
+        font-weight: bold;
+        box-shadow: 0 2px 8px rgba(24, 144, 255, 0.3);
+      }
+    }
+  }
+}

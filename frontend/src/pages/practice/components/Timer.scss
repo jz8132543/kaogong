@@ -1,0 +1,24 @@
+.timer-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f5f6f8;
+  padding: 4px 12px;
+  border-radius: 16px;
+  
+  .timer-icon {
+    font-size: 14px;
+    margin-right: 4px;
+  }
+  
+  .timer-text {
+    font-size: 14px;
+    font-family: monospace;
+    font-weight: bold;
+    color: #333;
+    
+    &.paused {
+      color: #999;
+    }
+  }
+}

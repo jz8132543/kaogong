@@ -1,0 +1,24 @@
+page {
+  background: #f5f6f8;
+}
+
+.dashboard-page {
+  padding: 16px;
+  
+  .user-greeting {
+    margin-bottom: 24px;
+    
+    .greeting-text {
+      display: block;
+      font-size: 24px;
+      font-weight: bold;
+      color: #333;
+      margin-bottom: 4px;
+    }
+    
+    .greeting-sub {
+      font-size: 14px;
+      color: #1890ff;
+    }
+  }
+}

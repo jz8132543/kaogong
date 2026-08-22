@@ -1,0 +1,213 @@
+page {
+  background: #f5f6f8;
+}
+
+.pledge-detail-page {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+
+  .main-scroll {
+    flex: 1;
+    
+    .hero-section {
+      background: linear-gradient(135deg, #1890ff 0%, #096dd9 100%);
+      padding: 32px 24px;
+      color: #fff;
+      
+      .title {
+        display: block;
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 8px;
+      }
+      
+      .subtitle {
+        display: block;
+        font-size: 13px;
+        opacity: 0.8;
+        margin-bottom: 24px;
+      }
+      
+      .pool-box {
+        background: rgba(255,255,255,0.1);
+        padding: 16px;
+        border-radius: 12px;
+        backdrop-filter: blur(4px);
+        
+        .pool-label {
+          display: block;
+          font-size: 13px;
+          opacity: 0.9;
+          margin-bottom: 4px;
+        }
+        
+        .pool-amount {
+          font-size: 32px;
+          font-weight: bold;
+          font-family: monospace;
+          color: #ffe58f;
+        }
+      }
+    }
+
+    .content-section {
+      padding: 24px 16px;
+      
+      .section-title {
+        font-size: 16px;
+        font-weight: bold;
+        color: #333;
+        margin-bottom: 12px;
+        
+        &.mt-20 {
+          margin-top: 24px;
+        }
+      }
+      
+      .rule-card {
+        background: #fff;
+        padding: 16px;
+        border-radius: 12px;
+        
+        .rule-text {
+          display: block;
+          font-size: 14px;
+          color: #666;
+          line-height: 1.8;
+          margin-bottom: 8px;
+          
+          &:last-child { margin-bottom: 0; }
+        }
+      }
+      
+      .calendar-mock {
+        height: 200px;
+        background: #fff;
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px dashed #d9d9d9;
+        
+        .mock-text {
+          color: #999;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+
+  .bottom-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 24px;
+    background: #fff;
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.05);
+    padding-bottom: calc(12px + env(safe-area-inset-bottom));
+    
+    .price-info {
+      .label {
+        font-size: 12px;
+        color: #999;
+        margin-right: 8px;
+      }
+      .price {
+        font-size: 20px;
+        font-weight: bold;
+        color: #f5222d;
+      }
+    }
+    
+    .join-btn {
+      margin: 0;
+      background: #fa8c16;
+      color: #fff;
+      font-size: 15px;
+      font-weight: bold;
+      height: 44px;
+      line-height: 44px;
+      border-radius: 22px;
+      padding: 0 24px;
+      
+      &::after { border: none; }
+    }
+  }
+
+  /* 抽屉样式 */
+  .drawer-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.6);
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    
+    .drawer-content {
+      background: #f5f5f5;
+      border-radius: 16px 16px 0 0;
+      padding: 24px;
+      padding-bottom: calc(24px + env(safe-area-inset-bottom));
+      animation: slideUp 0.3s ease-out forwards;
+      
+      .drawer-header {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 24px;
+        
+        .title { font-size: 18px; font-weight: bold; }
+        .close { font-size: 20px; color: #999; padding: 4px; }
+      }
+      
+      .pay-amount {
+        text-align: center;
+        margin-bottom: 32px;
+        
+        .symbol { font-size: 24px; margin-right: 4px; font-weight: bold; }
+        .num { font-size: 40px; font-weight: bold; font-family: monospace; }
+      }
+      
+      .pay-info {
+        background: #fff;
+        border-radius: 12px;
+        padding: 0 16px;
+        margin-bottom: 24px;
+        
+        .info-row {
+          display: flex;
+          justify-content: space-between;
+          padding: 16px 0;
+          border-bottom: 1px solid #f0f0f0;
+          
+          &:last-child { border-bottom: none; }
+          
+          .label { color: #666; font-size: 14px; }
+          .value { color: #333; font-size: 14px; font-weight: bold; }
+          .wechat { color: #07c160; }
+        }
+      }
+      
+      .pay-btn {
+        background: #07c160;
+        color: #fff;
+        height: 48px;
+        line-height: 48px;
+        border-radius: 8px;
+        font-size: 16px;
+        font-weight: bold;
+        
+        &::after { border: none; }
+      }
+    }
+  }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(100%); }
+  to { transform: translateY(0); }
+}

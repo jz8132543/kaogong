@@ -1,0 +1,115 @@
+.analysis-panel {
+  margin: 16px;
+  background: #fff;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+
+  .panel-header {
+    margin-bottom: 16px;
+    
+    .panel-title {
+      font-size: 16px;
+      font-weight: bold;
+      color: #333;
+    }
+  }
+
+  .teacher-tabs {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 16px;
+    border-bottom: 1px solid #f0f0f0;
+    
+    .tab-item {
+      padding: 8px 12px;
+      font-size: 14px;
+      color: #666;
+      border-bottom: 2px solid transparent;
+      
+      &.active {
+        color: #1890ff;
+        font-weight: bold;
+        border-bottom-color: #1890ff;
+      }
+    }
+  }
+
+  .analysis-content {
+    background: #f9f9f9;
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 24px;
+    
+    .content-text {
+      font-size: 15px;
+      color: #333;
+      line-height: 1.6;
+    }
+  }
+
+  .ai-replies-area {
+    max-height: 200px;
+    margin-bottom: 16px;
+    background: #f5f6f8;
+    border-radius: 8px;
+    padding: 12px;
+    
+    .reply-item {
+      font-size: 14px;
+      margin-bottom: 12px;
+      line-height: 1.5;
+      
+      &.user { color: #1890ff; }
+      &.ai { color: #333; }
+      
+      &:last-child { margin-bottom: 0; }
+    }
+  }
+
+  .ai-ask-box {
+    border-top: 1px solid #f0f0f0;
+    padding-top: 16px;
+
+    .ask-hint {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 13px;
+      color: #666;
+      margin-bottom: 12px;
+      
+      .token-cost {
+        color: #fa8c16;
+        font-weight: bold;
+      }
+    }
+
+    .input-area {
+      display: flex;
+      gap: 12px;
+      
+      .ask-input {
+        flex: 1;
+        background: #f5f5f5;
+        height: 36px;
+        border-radius: 18px;
+        padding: 0 16px;
+        font-size: 14px;
+      }
+      
+      .ask-btn {
+        margin: 0;
+        background: #1890ff;
+        color: #fff;
+        height: 36px;
+        line-height: 36px;
+        border-radius: 18px;
+        padding: 0 20px;
+        font-size: 14px;
+        
+        &::after { border: none; }
+      }
+    }
+  }
+}

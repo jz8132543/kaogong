@@ -1,0 +1,109 @@
+.question-card {
+  padding: 16px;
+  background: #fff;
+  border-radius: 12px;
+  margin-bottom: 16px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+
+  .tags-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 12px;
+
+    .tag {
+      font-size: 10px;
+      color: #1890ff;
+      background: #e6f7ff;
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+  }
+
+  .content-area {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 24px;
+    word-break: break-all;
+
+    .question-image {
+      display: block;
+      width: 100%;
+      max-width: 100%;
+      margin: 12px 0;
+      border-radius: 8px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+    }
+  }
+
+  .options-area {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    .option-item {
+      display: flex;
+      align-items: flex-start;
+      padding: 12px 16px;
+      border: 1px solid #ebedf0;
+      border-radius: 8px;
+      background: #fff;
+      transition: all 0.2s ease;
+
+      .option-letter {
+        font-weight: bold;
+        color: #666;
+        margin-right: 12px;
+        width: 24px;
+        height: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        background: #f5f6f8;
+      }
+
+      .option-text {
+        flex: 1;
+        font-size: 15px;
+        color: #333;
+        line-height: 1.5;
+      }
+
+      // 交互态
+      &:active {
+        background: #f7f8fa;
+      }
+
+      &.selected {
+        border-color: #1890ff;
+        background: #e6f7ff;
+        
+        .option-letter {
+          background: #1890ff;
+          color: #fff;
+        }
+      }
+
+      // 交卷后的对错标识
+      &.correct-answer {
+        border-color: #52c41a;
+        background: #f6ffed;
+        .option-letter {
+          background: #52c41a;
+          color: #fff;
+        }
+      }
+
+      &.wrong-answer {
+        border-color: #f5222d;
+        background: #fff1f0;
+        .option-letter {
+          background: #f5222d;
+          color: #fff;
+        }
+      }
+    }
+  }
+}

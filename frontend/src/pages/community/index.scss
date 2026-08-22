@@ -1,0 +1,54 @@
+page {
+  background: #f5f6f8;
+}
+
+.community-page {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  
+  .tabs-header {
+    display: flex;
+    padding: 16px 24px;
+    background: #fff;
+    gap: 24px;
+    
+    .tab {
+      font-size: 16px;
+      color: #666;
+      font-weight: 500;
+      position: relative;
+      
+      &.active {
+        color: #333;
+        font-weight: bold;
+        font-size: 18px;
+        
+        &::after {
+          content: '';
+          position: absolute;
+          bottom: -8px;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 20px;
+          height: 4px;
+          border-radius: 2px;
+          background: #fa8c16;
+        }
+      }
+    }
+  }
+
+  .community-content {
+    flex: 1;
+    padding: 16px;
+    box-sizing: border-box;
+
+    .bottom-hint {
+      text-align: center;
+      padding: 24px 0;
+      font-size: 12px;
+      color: #ccc;
+    }
+  }
+}
