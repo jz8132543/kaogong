@@ -74,20 +74,20 @@ in
 
         # Build backend
         cd backend
-        rm -rf node_modules package-lock.json
-        npm install --no-audit --no-fund --legacy-peer-deps
+        rm -rf node_modules
+        pnpm install --frozen-lockfile
         npm run build
 
         # Build admin
         cd ../admin
-        rm -rf node_modules package-lock.json
-        npm install --no-audit --no-fund --legacy-peer-deps
+        rm -rf node_modules
+        pnpm install --frozen-lockfile
         npm run build
 
         # Build frontend
         cd ../frontend
-        rm -rf node_modules package-lock.json
-        npm install --no-audit --no-fund --legacy-peer-deps
+        rm -rf node_modules
+        pnpm install --frozen-lockfile
         npm run build:h5
       '';
       serviceConfig = {
