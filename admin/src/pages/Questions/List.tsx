@@ -60,7 +60,7 @@ export default function QuestionList() {
       title: '操作',
       key: 'action',
       width: 250,
-      render: (_, record: any) => (
+      render: (_: any, record: any) => (
         <Space size="middle">
           <Button size="small" type="dashed" onClick={() => triggerAnalysis(record.id)}>
             一键生成解析
