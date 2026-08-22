@@ -75,19 +75,19 @@ in
         # Build backend
         cd backend
         rm -rf node_modules
-        pnpm install --frozen-lockfile
+        pnpm install --frozen-lockfile --ignore-scripts
         npm run build
 
         # Build admin
         cd ../admin
         rm -rf node_modules
-        pnpm install --frozen-lockfile
+        pnpm install --frozen-lockfile --ignore-scripts
         npm run build
 
         # Build frontend
         cd ../frontend
         rm -rf node_modules
-        pnpm install --frozen-lockfile
+        pnpm install --frozen-lockfile --ignore-scripts
         npm run build:h5
       '';
       serviceConfig = {
